@@ -1,16 +1,18 @@
-const gridContanier = document.querySelector("#grid-contanier");
-const singleCell = document.createElement("div");
-singleCell.textContent.textContent = "hello";
+const gridContanier = document.getElementById("grid-contanier");
+let userInput = 16;
+for (let index = 0; index < userInput; index++) {
+    let rowCon = document.createElement("div")
 
-let numOfCells= 256;
-for (let i = 0;i<numOfCells;i++){
+    for(let i = 0;i <userInput;i++){ 
     const singleCell = document.createElement("div");
-    singleCell.textContent = "hello";
-    singleCell.style.color = "white";
+    singleCell.textContent = ".";
+    singleCell.style.color = "bg-red";
     singleCell.classList.add("bg-red");
-    singleCell.addEventListener('click',() => {
-        alert("hello world");
+singleCell.addEventListener('mouseover' , () => {       
+        singleCell.classList.add= "bg-blue";
+        singleCell.style.color = "bg-blue";
     });
-
-    gridContanier.appendChild(singleCell);
+rowCon.appendChild(singleCell);
+}   
+gridContanier.appendChild(rowCon);
 }
