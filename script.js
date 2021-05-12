@@ -21,7 +21,7 @@ function bildgrid(){
 }
 
 document.getElementById("btn").addEventListener("click",() =>{
-    userInput=prompt("hi");
+    userInput=prompt("pick a size for next grid");
     gridContanier.innerHTML="";
     bildgrid();
 
